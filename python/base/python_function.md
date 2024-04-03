@@ -45,3 +45,25 @@ foo_params = foo_sig.parameters
 
 
 
+# python side effect
+函数副作用，即某个函数的运行可能会导致其他函数的结果产生影响
+
+
+
+# python 中的海象表达式
+```python
+
+### exmaple 1
+count = fresh_fruit.get('lemon',0)
+if count:
+    make_lemonade(count)
+else:
+    out_of_stock()
+
+# use the walrus
+### exmaple 2 
+if count := fresh_fruit.get('lemon',0):
+    make_lemonade(count)
+else:
+    out_of_stock()
+```
